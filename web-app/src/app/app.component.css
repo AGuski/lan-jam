@@ -1,0 +1,33 @@
+:host() {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.top, .middle, .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.server-info {
+  font-size: 16px;
+}
+
+.name-input {
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.clients-title {
+  margin-bottom: 10px;
+  color: rgba(255,255,255,.87);
+}

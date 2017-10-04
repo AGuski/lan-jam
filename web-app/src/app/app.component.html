@@ -1,0 +1,59 @@
+<md-toolbar color="primary">
+  <span>LAN Jam App</span>
+  <span class="toolbar-spacer"></span>
+  <span
+    class="server-info" 
+    *ngIf="serverAddress"
+    >Connect: <strong>{{serverAddress}}</strong>
+  </span>
+  <md-toolbar-row>
+    <md-form-field class="name-input">
+      <input mdInput type="text" placeholder="Your name" #name>
+    </md-form-field>
+    <button
+      md-raised-button
+      color="accent"
+      selected="true"
+      (click)="setName(name.value)"
+    >Set Name
+    </button>
+  </md-toolbar-row>
+</md-toolbar>
+
+  
+  <div class="top">
+    
+    <span class="clients-title">Jamming buddies in the house:</span>
+    <md-chip-list>
+      <md-chip *ngFor="let clientName of connections"
+        color="primary"
+        selected="true"
+      >{{clientName}}
+      </md-chip>
+    </md-chip-list>
+
+  </div>
+  
+  
+  <div class="middle">
+    
+    <button 
+      md-raised-button
+      color="primary"
+      (click)="pushTheButton()"
+    >JAM!</button>
+
+  </div>
+  
+  
+  <div class="bottom">
+    
+    <md-chip
+      [color]="clientsColor"
+      selected="true"
+    >Clients: {{connections.length}}
+    </md-chip>
+
+  </div>
+  
+  

@@ -1,0 +1,18 @@
+{
+  "name": "lan-jam-electron-app",
+  "version": "1.0.0",
+  "author": "Alexander Guski",
+  "main": "main.js",
+  "scripts": {
+    "start": "./node_modules/.bin/electron .",
+    "build": "electron-packager . 'LAN Jam' --out='./build' --overwrite"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "ws": "^3.1.0"
+  },
+  "devDependencies": {
+    "electron": "^1.7.6",
+    "electron-packager": "^9.0.1"
+  }
+}
